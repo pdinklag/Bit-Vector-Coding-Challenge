@@ -5,6 +5,7 @@ Bearbeiten Sie bis zur Seminarphase mindestens die Aufgaben 1 und 2. Wer auch di
 Beachten Sie folgende allgemeine Hinweise:
 * Alle Implementierungen sollen in C++17 erfolgen! Es sollen keine externen Bibliotheken verwendet werden.
 * Nutzen Sie den gegebenen Code-Rahmen. Die in den Aufgaben genannten Schnittstellen müssen erhalten bleiben, ansonsten dürfen Sie Ihrer Kreativität freien Lauf lassen!
+* Die vorgefertigten Implementierungen im Code-Rahmen sind funktionsfähig, aber sehr naiv und nicht platzeffizient. Sie dienen als Überblick und Einstiegspunkt.
 * Die Lösungsvorschläge sind Vorschläge - probieren Sie gern eigene Ideen aus!
 * Es gibt einen Preis für die beste Implementierung (beste Laufzeit und kleinster Speicherplatzverbrauch in gleicher Testumgebung)!
 
@@ -12,7 +13,10 @@ Beachten Sie folgende allgemeine Hinweise:
 
 Implementieren Sie eine Klasse `bit_vector`, die Bitvektoren repräsentiert. Verwenden Sie _word packing_ (z.B. mit `uint64_t`, um jeweils 64 Bits in einem Wort speichern zu können).
 
-Der Bitvektor soll über den Konstruktor seine Länge `n` erhalten und für diese `n` Bits Speicher allokieren. Über die Operationen `bitset` und `bitread` sollen Bits für eine Position `i < n` geschrieben bzw. gelesen werden können. Um dies zu realisieren, müssen Sie sich mit bitweisen Operationen in C bzw. C++ vertraut machen.
+Der Bitvektor soll über den Konstruktor seine Länge `n` erhalten und für diese `n` Bits Speicher allokieren. Initial sollen alle Bits auf 0 stehen. Über die Operationen `bitset` und `bitread` sollen Bits für eine Position `i < n` geschrieben bzw. gelesen werden können. Um dies zu realisieren, müssen Sie sich mit bitweisen Operationen in C bzw. C++ vertraut machen.
+
+Hinweise:
+* Für gewöhnlich ist `std::vector<bool>` in der Standardbibliothek als Bitvektor implementiert und kann in der Praxis verwendet werden, wie es im Code-Rahmen der Fall ist. Das Ziel dieser Aufgabe ist es jedoch, sich selbst mit den Basics auseinanderzusetzen.
 
 #### Beispiel-Anwendung
 ```cpp
@@ -76,7 +80,7 @@ $ cmake ..
 $ make
 ```
 
-Führen Sie im Unterverzeichnis `test` die Programme `test-bv`, `test-rank` und `test-select` aus, um Ihre Implementierungen von Bitvektoren Korrektheit zu überprüfen.
+Führen Sie im Unterverzeichnis `test` die Programme `test-bv`, `test-rank`, `test-select` und `test-integration` aus, um Ihre Implementierungen von Bitvektoren Korrektheit zu überprüfen.
 
 #### Benchmark
 Der Benchmark zur Ermittlung der Sieger wird unter fairen Bedingungen durchgeführt. Sieger sind die Implementierungen, die auf der Pareto-Front bezüglich Laufzeit und Speicherplatzverbrauch für den Benchmark liegen.
