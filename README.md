@@ -76,6 +76,7 @@ Im Code-Rahmen sind einfache Testprogramme enthalten, mit der Sie Ihre Implement
 Zum Kompilieren wechseln Sie in das `bvcc`-Verzeichnis und führen folgende Befehle aus:
 ```
 $ mkdir build
+$ cd build
 $ cmake ..
 $ make
 ```
