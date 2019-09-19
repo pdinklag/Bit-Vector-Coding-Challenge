@@ -8,6 +8,7 @@ Beachten Sie folgende allgemeine Hinweise:
 * Die vorgefertigten Implementierungen im Code-Rahmen sind funktionsfähig, aber sehr naiv und nicht platzeffizient. Sie dienen als Überblick und Einstiegspunkt.
 * Die Lösungsvorschläge sind Vorschläge - probieren Sie gern eigene Ideen aus!
 * Es gibt einen Preis für die beste Implementierung (beste Laufzeit und kleinster Speicherplatzverbrauch in gleicher Testumgebung)!
+* Die mit Stern markierten Aufgaben sind optional.
 
 ## Aufgabe 1
 
