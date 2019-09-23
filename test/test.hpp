@@ -4,9 +4,9 @@
 template<typename F>
 void NK_test(F f) {
     for(size_t n = 7; n <= 16; n++) {
-        const size_t N = 1 << n; // amount of bits
+        const size_t N = 1ULL << n; // amount of bits
         for(size_t k = 0; k <= 4; k++) {
-            const size_t K = 1 << k;  // every K-th bit set
+            const size_t K = 1ULL << k;  // every K-th bit set
             f(N, K);
         }
     }
